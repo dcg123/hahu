@@ -39,7 +39,7 @@
         <constructor-arg index="2" value="${redis.port}" />
         <constructor-arg index="3" value="${redis.timeout}" />
         <!--Redis密码-->
-        <constructor-arg index="4" value="${redis.password}" />
+        <!--<constructor-arg index="4" value="${redis.password}" />-->
     </bean>
 
 
@@ -61,8 +61,6 @@
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager ">
 		<property name="dataSource" ref="dataSource"/>
 	</bean>
-
-
     <!-- session工厂 -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
@@ -74,7 +72,6 @@
         <property name="basePackage" value="com.fc.mapper"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
-
     <!--线程池-->
     <bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
         <property name="corePoolSize" value="10"/>

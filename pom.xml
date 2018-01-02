@@ -191,7 +191,13 @@
 		    <artifactId>commons-lang3</artifactId>
 		    <version>3.5</version>
 		</dependency>
-		
+
+        <!--solr-->
+        <dependency>
+            <groupId>org.apache.solr</groupId>
+            <artifactId>solr-solrj</artifactId>
+            <version>5.3.1</version>
+        </dependency>
 		<!-- https://mvnrepository.com/artifact/com.belerweb/weibo4j-oauth2 -->
 		<dependency>
 		    <groupId>com.belerweb</groupId>

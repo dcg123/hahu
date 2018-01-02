@@ -137,7 +137,7 @@ public class UserService {
 
 		// 校验用户帐号是否激活
 		Integer activationState = userMapper.selectActivationStateByUserId(userId);
-		if (activationState != 1) {
+		if (activationState == 1) {
 			map.put("error", "您的帐号还没有激活");
 			return map;
 		}
